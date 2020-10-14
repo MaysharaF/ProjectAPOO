@@ -110,13 +110,16 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void novaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novaBtnActionPerformed
-        // TODO add your handling code here:
+       DenunciaForm denunciaForm = new DenunciaForm();
+       denunciaForm.setVisible(true);
+       this.hide();
     }//GEN-LAST:event_novaBtnActionPerformed
 
     private void ajudaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajudaBtnActionPerformed
          HelperInfo helperInfo = new HelperInfo();
         helperInfo.setVisible(true);
         this.hide();
+        
     }//GEN-LAST:event_ajudaBtnActionPerformed
 
     /**
