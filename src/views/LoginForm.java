@@ -5,6 +5,14 @@
  */
 package views;
 
+import helper.UsuarioLogado;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import model.Usuario;
+import modelDAO.UsuarioDAO;
+
 /**
  *
  * @author shen
@@ -142,13 +150,31 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        // TODO add your handling code here:
+        if (emailInput.getText().isEmpty() || passwordInpt.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+        } else {
+            UsuarioDAO uDAO = new UsuarioDAO();
+            try {
+                Usuario u = null;
+                u = uDAO.findByEmailAndSenha(emailInput.getText(), passwordInpt.getText());
+                if (u != null) {
+                    new UsuarioLogado(u.getNome(), u.getEmail());
+                    Home home = new Home();
+                    home.setVisible(true);
+                    this.hide();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuário não encontrado");
+                }
+            } catch (ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(RegistrarForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void registrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarBtnActionPerformed
         RegistrarForm registrar = new RegistrarForm();
         registrar.setVisible(true);
-        this.hide(); 
+        this.hide();
     }//GEN-LAST:event_registrarBtnActionPerformed
 
     private void passwordInptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordInptActionPerformed
