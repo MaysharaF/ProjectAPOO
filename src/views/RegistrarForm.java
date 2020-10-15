@@ -5,6 +5,14 @@
  */
 package views;
 
+import helper.UsuarioLogado;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import model.Usuario;
+import modelDAO.UsuarioDAO;
+
 /**
  *
  * @author shen
@@ -148,11 +156,32 @@ public class RegistrarForm extends javax.swing.JFrame {
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         LoginForm login = new LoginForm();
         login.setVisible(true);
-        this.hide(); 
+        this.hide();
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void registrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarBtnActionPerformed
-      
+        if (emailInpt.getText().isEmpty() || nameInpt.getText().isEmpty() || passwordInpt.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+        } else {
+            UsuarioDAO uDAO = new UsuarioDAO();
+            try {
+
+                Usuario u = null;
+                u = uDAO.findByEmail(emailInpt.getText());
+                if (u != null) {
+                    JOptionPane.showMessageDialog(null, "Email já cadastrado");
+                } else {
+                    u = new Usuario(emailInpt.getText(), nameInpt.getText(), passwordInpt.getText());
+                    uDAO.insert(u);
+                    new UsuarioLogado(nameInpt.getText(), emailInpt.getText());
+                    Home home = new Home();
+                    home.setVisible(true);
+                    this.hide();
+                }
+            } catch (ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(RegistrarForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_registrarBtnActionPerformed
 
     /**
