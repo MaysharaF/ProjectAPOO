@@ -77,6 +77,12 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Senha");
 
+        emailInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailInputActionPerformed(evt);
+            }
+        });
+
         passwordInpt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordInptActionPerformed(evt);
@@ -157,8 +163,9 @@ public class LoginForm extends javax.swing.JFrame {
             try {
                 Usuario u = null;
                 u = uDAO.findByEmailAndSenha(emailInput.getText(), passwordInpt.getText());
+                System.out.println("views.LoginForm.loginBtnActionPerformed()" + u);
                 if (u != null) {
-                    new UsuarioLogado(u.getNome(), u.getEmail());
+                    new UsuarioLogado(u.getId(),u.getNome(), u.getEmail());
                     Home home = new Home();
                     home.setVisible(true);
                     this.hide();
@@ -180,6 +187,10 @@ public class LoginForm extends javax.swing.JFrame {
     private void passwordInptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordInptActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordInptActionPerformed
+
+    private void emailInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailInputActionPerformed
 
     /**
      * @param args the command line arguments

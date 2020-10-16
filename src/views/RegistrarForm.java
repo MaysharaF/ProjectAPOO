@@ -173,7 +173,8 @@ public class RegistrarForm extends javax.swing.JFrame {
                 } else {
                     u = new Usuario(emailInpt.getText(), nameInpt.getText(), passwordInpt.getText());
                     uDAO.insert(u);
-                    new UsuarioLogado(nameInpt.getText(), emailInpt.getText());
+                    u = uDAO.findByEmail(emailInpt.getText());
+                    new UsuarioLogado(u.getId(),u.getNome(), u.getEmail());
                     Home home = new Home();
                     home.setVisible(true);
                     this.hide();

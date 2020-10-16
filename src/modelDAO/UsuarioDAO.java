@@ -41,7 +41,7 @@ public class UsuarioDAO {
         stmt.setString(2, senha);
         rs = stmt.executeQuery();
         while (rs.next()) {
-            u = new Usuario(rs.getInt("id"), rs.getString("nome"), rs.getString("senha"));
+            u = new Usuario(rs.getInt("id"), rs.getString("nome"), rs.getString("email"),rs.getString("senha"));
         }
         Database.closeConnection(conn, stmt, rs);
         return u;
@@ -57,7 +57,7 @@ public class UsuarioDAO {
         stmt.setString(1, email);
         rs = stmt.executeQuery();
         while (rs.next()) {
-            u = new Usuario(rs.getInt("id"), rs.getString("nome"), rs.getString("senha"));
+            u = new Usuario(rs.getInt("id"), rs.getString("nome"), rs.getString("email"),rs.getString("senha"));
         }
         Database.closeConnection(conn, stmt, rs);
         return u;

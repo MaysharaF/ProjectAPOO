@@ -14,11 +14,38 @@ public class UsuarioLogado {
 
     private static String nome;
     private static String email;
+    public static int id;
 
-    public UsuarioLogado(String nome, String email) {
+    public UsuarioLogado(int id,String nome, String email) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
     }
+
+    public static String getNome() {
+        return nome;
+    }
+
+    public static void setNome(String nome) {
+        UsuarioLogado.nome = nome;
+    }
+
+    public static String getEmail() {
+        return email;
+    }
+
+    public static void setEmail(String email) {
+        UsuarioLogado.email = email;
+    }
+
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        UsuarioLogado.id = id;
+    }
+    
 
     private UsuarioLogado() {
     }

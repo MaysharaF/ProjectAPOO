@@ -30,8 +30,6 @@ public class HelperInfo extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -40,6 +38,9 @@ public class HelperInfo extends javax.swing.JFrame {
         jTextPane5 = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextPane6 = new javax.swing.JTextPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        backBtn = new javax.swing.JButton();
 
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(204, 255, 255));
@@ -49,44 +50,72 @@ public class HelperInfo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextPane2.setText("Existem diversos tipos de assédio e, por falta de conhecimento, algumas pessoas nem sabem que estão sendo vítimas deste tipo de violência até que a situação fique insuportável.\nO assédio moral é uma violência contra a dignidade do outro. Quem sofre com assédio moral, normalmente, é humilhado, tem suas capacidades questionadas, passa por ameaças e chega a ser ridicularizado pelos outros.\nEsse tipo de assédio costuma acontecer em casa, ambientes de trabalho e estudo, ou seja, tem como culpado pessoas que estão próximas a você e te conhecem bem.\nQuando o seu chefe grita e te humilha na frente de outros funcionários por um erro cometido, isso é assédio moral. Quando seus “colegas” de trabalho fazem piadas sobre você com o objetivo de prejudicar sua imagem, isso também é assédio moral. Quando a fofoca das pessoas passa a te prejudicar, isso é assédio moral.");
-        jScrollPane3.setViewportView(jTextPane2);
-
-        jTabbedPane2.addTab("Assédio Moral", jScrollPane3);
-
+        jTextPane3.setEditable(false);
         jTextPane3.setText("Esse é um dos tipos mais frequentes dessa violência, o assédio sexual acontece quando a mulher é objetificada e é sugerido ou imposto que haja um relacionamento sexual entre o assediador e a assediada.\nO assédio sexual pode acontecer em qualquer lugar, seja no seu trabalho ou na rua, quando você não dá abertura para que haja uma aproximação sexual e, mesmo assim, o outro diz palavras, faz gestos ou te toca de forma a demonstrar o desejo.\nUma das formas mais tradicionais de assédio sexual acontece nas ruas, por parte de desconhecidos que usam palavras chulas para descrever sua aparência ou para fazer convites relacionados ao sexo.\nTambém pode acontecer dentro do ambiente de trabalho ou em faculdades, por exemplo. Nesse caso, muitos assediadores usam da violência de uma forma mais sutil, mas que deixa a vítima igualmente desconfortável e amedrontada.\nQuando parte de alguém com nível hierárquico maior que o seu, a vítima se sente ainda pior, porque acha que se denunciar a violência vai sofrer represálias e pode até perder o emprego. ");
         jScrollPane1.setViewportView(jTextPane3);
 
         jTabbedPane2.addTab("Assédio Sexual", jScrollPane1);
 
+        jTextPane4.setEditable(false);
         jTextPane4.setText("Esse tipo de assédio pode acontecer em diversos contextos e pode envolver tanto pessoas próximas quanto completos desconhecidos. Ele se caracteriza por atos em que ocorrem xingamentos, vaias, ridicularização, insultos, provocações ou ameaças contra uma pessoa.\nO assédio verbal é considerado um delito no Brasil, protegido pela lei de injúria. A pessoa que sofre esse tipo de assédio pode ser indenizada por Danos Morais.");
         jScrollPane4.setViewportView(jTextPane4);
 
         jTabbedPane2.addTab("Assédio Verbal", jScrollPane4);
 
+        jTextPane5.setEditable(false);
         jTextPane5.setText("Como o nome sugere, o assédio virtual acontece online e é praticado por indivíduos que usam a tecnologia para ofender, hostilizar ou importunar uma pessoa ou um grupo específico. Ameaças, comentários sexuais ou pejorativos, divulgação de dados ou informações pessoais e a propagação de discursos de ódio feitos na internet se enquadram em ações de assédio virtual.");
         jScrollPane5.setViewportView(jTextPane5);
 
         jTabbedPane2.addTab("Assédio Virtual", jScrollPane5);
 
+        jTextPane6.setEditable(false);
         jTextPane6.setText("Essa é uma das formas mais veladas de assédio, pois as vítimas de violência psicológica na maioria das vezes demoram a perceber que estão sendo abusadas e assediadas. O assédio psicológico também pode ocorrer de várias maneiras e pode se manifestar por meio de comportamentos ofensivos, persistentes, insultuosos, abusivos, intimidatórios e até mesmo por meio do abuso de poder.\n\nEm todos os tipos de assédio, o mais indicado é que a vítima busque por ajuda e se informe sobre as medidas que podem ser tomadas. Em alguns casos, o correto é tratar desses assédios judicialmente, mas, em outras, o melhor a se fazer é buscar apoio emocional e psicológico.");
         jScrollPane6.setViewportView(jTextPane6);
 
         jTabbedPane2.addTab("Assédio psicológico", jScrollPane6);
 
+        jTextPane2.setEditable(false);
+        jTextPane2.setBackground(new java.awt.Color(102, 204, 255));
+        jTextPane2.setText("Existem diversos tipos de assédio e, por falta de conhecimento, algumas pessoas nem sabem que estão sendo vítimas deste tipo de violência até que a situação fique insuportável.\nO assédio moral é uma violência contra a dignidade do outro. Quem sofre com assédio moral, normalmente, é humilhado, tem suas capacidades questionadas, passa por ameaças e chega a ser ridicularizado pelos outros.\nEsse tipo de assédio costuma acontecer em casa, ambientes de trabalho e estudo, ou seja, tem como culpado pessoas que estão próximas a você e te conhecem bem.\nQuando o seu chefe grita e te humilha na frente de outros funcionários por um erro cometido, isso é assédio moral. Quando seus “colegas” de trabalho fazem piadas sobre você com o objetivo de prejudicar sua imagem, isso também é assédio moral. Quando a fofoca das pessoas passa a te prejudicar, isso é assédio moral.");
+        jScrollPane3.setViewportView(jTextPane2);
+
+        jTabbedPane2.addTab("Assédio Moral", jScrollPane3);
+
+        backBtn.setBackground(new java.awt.Color(204, 204, 204));
+        backBtn.setText("Voltar");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(464, Short.MAX_VALUE)
+                .addComponent(backBtn)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(backBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        Home home = new Home();
+        home.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_backBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +153,7 @@ public class HelperInfo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBtn;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

@@ -46,12 +46,22 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane2" alignment="0" pref="535" max="32767" attributes="0"/>
+          <Component id="jTabbedPane2" alignment="0" pref="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="464" max="32767" attributes="0"/>
+              <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane2" alignment="0" pref="315" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jTabbedPane2" min="-2" pref="307" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -60,27 +70,6 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Ass&#xe9;dio Moral">
-                <Property name="tabTitle" type="java.lang.String" value="Ass&#xe9;dio Moral"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Existem diversos tipos de ass&#xe9;dio e, por falta de conhecimento, algumas pessoas nem sabem que est&#xe3;o sendo v&#xed;timas deste tipo de viol&#xea;ncia at&#xe9; que a situa&#xe7;&#xe3;o fique insuport&#xe1;vel.&#xa;O ass&#xe9;dio moral &#xe9; uma viol&#xea;ncia contra a dignidade do outro. Quem sofre com ass&#xe9;dio moral, normalmente, &#xe9; humilhado, tem suas capacidades questionadas, passa por amea&#xe7;as e chega a ser ridicularizado pelos outros.&#xa;Esse tipo de ass&#xe9;dio costuma acontecer em casa, ambientes de trabalho e estudo, ou seja, tem como culpado pessoas que est&#xe3;o pr&#xf3;ximas a voc&#xea; e te conhecem bem.&#xa;Quando o seu chefe grita e te humilha na frente de outros funcion&#xe1;rios por um erro cometido, isso &#xe9; ass&#xe9;dio moral. Quando seus &#x201c;colegas&#x201d; de trabalho fazem piadas sobre voc&#xea; com o objetivo de prejudicar sua imagem, isso tamb&#xe9;m &#xe9; ass&#xe9;dio moral. Quando a fofoca das pessoas passa a te prejudicar, isso &#xe9; ass&#xe9;dio moral."/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -97,6 +86,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextPane" name="jTextPane3">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="Esse &#xe9; um dos tipos mais frequentes dessa viol&#xea;ncia, o ass&#xe9;dio sexual acontece quando a mulher &#xe9; objetificada e &#xe9; sugerido ou imposto que haja um relacionamento sexual entre o assediador e a assediada.&#xa;O ass&#xe9;dio sexual pode acontecer em qualquer lugar, seja no seu trabalho ou na rua, quando voc&#xea; n&#xe3;o d&#xe1; abertura para que haja uma aproxima&#xe7;&#xe3;o sexual e, mesmo assim, o outro diz palavras, faz gestos ou te toca de forma a demonstrar o desejo.&#xa;Uma das formas mais tradicionais de ass&#xe9;dio sexual acontece nas ruas, por parte de desconhecidos que usam palavras chulas para descrever sua apar&#xea;ncia ou para fazer convites relacionados ao sexo.&#xa;Tamb&#xe9;m pode acontecer dentro do ambiente de trabalho ou em faculdades, por exemplo. Nesse caso, muitos assediadores usam da viol&#xea;ncia de uma forma mais sutil, mas que deixa a v&#xed;tima igualmente desconfort&#xe1;vel e amedrontada.&#xa;Quando parte de algu&#xe9;m com n&#xed;vel hier&#xe1;rquico maior que o seu, a v&#xed;tima se sente ainda pior, porque acha que se denunciar a viol&#xea;ncia vai sofrer repres&#xe1;lias e pode at&#xe9; perder o emprego. "/>
               </Properties>
             </Component>
@@ -118,6 +108,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextPane" name="jTextPane4">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="Esse tipo de ass&#xe9;dio pode acontecer em diversos contextos e pode envolver tanto pessoas pr&#xf3;ximas quanto completos desconhecidos. Ele se caracteriza por atos em que ocorrem xingamentos, vaias, ridiculariza&#xe7;&#xe3;o, insultos, provoca&#xe7;&#xf5;es ou amea&#xe7;as contra uma pessoa.&#xa;O ass&#xe9;dio verbal &#xe9; considerado um delito no Brasil, protegido pela lei de inj&#xfa;ria. A pessoa que sofre esse tipo de ass&#xe9;dio pode ser indenizada por Danos Morais."/>
               </Properties>
             </Component>
@@ -139,6 +130,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextPane" name="jTextPane5">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="Como o nome sugere, o ass&#xe9;dio virtual acontece online e &#xe9; praticado por indiv&#xed;duos que usam a tecnologia para ofender, hostilizar ou importunar uma pessoa ou um grupo espec&#xed;fico. Amea&#xe7;as, coment&#xe1;rios sexuais ou pejorativos, divulga&#xe7;&#xe3;o de dados ou informa&#xe7;&#xf5;es pessoais e a propaga&#xe7;&#xe3;o de discursos de &#xf3;dio feitos na internet se enquadram em a&#xe7;&#xf5;es de ass&#xe9;dio virtual."/>
               </Properties>
             </Component>
@@ -160,12 +152,49 @@
           <SubComponents>
             <Component class="javax.swing.JTextPane" name="jTextPane6">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="Essa &#xe9; uma das formas mais veladas de ass&#xe9;dio, pois as v&#xed;timas de viol&#xea;ncia psicol&#xf3;gica na maioria das vezes demoram a perceber que est&#xe3;o sendo abusadas e assediadas. O ass&#xe9;dio psicol&#xf3;gico tamb&#xe9;m pode ocorrer de v&#xe1;rias maneiras e pode se manifestar por meio de comportamentos ofensivos, persistentes, insultuosos, abusivos, intimidat&#xf3;rios e at&#xe9; mesmo por meio do abuso de poder.&#xa;&#xa;Em todos os tipos de ass&#xe9;dio, o mais indicado &#xe9; que a v&#xed;tima busque por ajuda e se informe sobre as medidas que podem ser tomadas. Em alguns casos, o correto &#xe9; tratar desses ass&#xe9;dios judicialmente, mas, em outras, o melhor a se fazer &#xe9; buscar apoio emocional e psicol&#xf3;gico."/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Ass&#xe9;dio Moral">
+                <Property name="tabTitle" type="java.lang.String" value="Ass&#xe9;dio Moral"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextPane2">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="66" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Existem diversos tipos de ass&#xe9;dio e, por falta de conhecimento, algumas pessoas nem sabem que est&#xe3;o sendo v&#xed;timas deste tipo de viol&#xea;ncia at&#xe9; que a situa&#xe7;&#xe3;o fique insuport&#xe1;vel.&#xa;O ass&#xe9;dio moral &#xe9; uma viol&#xea;ncia contra a dignidade do outro. Quem sofre com ass&#xe9;dio moral, normalmente, &#xe9; humilhado, tem suas capacidades questionadas, passa por amea&#xe7;as e chega a ser ridicularizado pelos outros.&#xa;Esse tipo de ass&#xe9;dio costuma acontecer em casa, ambientes de trabalho e estudo, ou seja, tem como culpado pessoas que est&#xe3;o pr&#xf3;ximas a voc&#xea; e te conhecem bem.&#xa;Quando o seu chefe grita e te humilha na frente de outros funcion&#xe1;rios por um erro cometido, isso &#xe9; ass&#xe9;dio moral. Quando seus &#x201c;colegas&#x201d; de trabalho fazem piadas sobre voc&#xea; com o objetivo de prejudicar sua imagem, isso tamb&#xe9;m &#xe9; ass&#xe9;dio moral. Quando a fofoca das pessoas passa a te prejudicar, isso &#xe9; ass&#xe9;dio moral."/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="backBtn">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtnActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
