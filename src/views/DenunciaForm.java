@@ -5,6 +5,7 @@
  */
 package views;
 
+import helper.UsuarioLogado;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -233,8 +234,10 @@ public class DenunciaForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Os campos: Nome da Vítima, Nome do Autor, Data do Ocorrido e"
                                                 + " Descrição precisam estar preenchidos. ");
         } else {
+            System.out.println(nameInpt.getText() + nameVInpt.getText() + nameAInpt.getText() + AssedeSlct.getSelectedIndex() +
+                                      dateInpt.getText() +  infoInpt.getText() + true + UsuarioLogado.getId());
             Denuncia d = new Denuncia(nameInpt.getText(), nameVInpt.getText(), nameAInpt.getText(), AssedeSlct.getSelectedIndex(),
-                                      dateInpt.getText(), infoInpt.getText());
+                                      dateInpt.getText(), infoInpt.getText(), true, UsuarioLogado.getId());
             DenunciaDAO denunciaDAO = new DenunciaDAO(); 
             try {
                 denunciaDAO.insert(d);

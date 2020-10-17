@@ -17,14 +17,17 @@ public class DenunciaDAO {
         PreparedStatement stmt = null;
         
 
-        stmt = conn.prepareStatement("INSERT INTO novaDenun(nome, nome_vitima, nome_autor, tipo, data_denun, descricao) "
-                                   + "VALUES (?, ?, ?, ?, ?, ? )");
+        stmt = conn.prepareStatement("INSERT INTO novaDenun(nome, nome_vitima, nome_autor, tipo, data_denun,"
+                                                           + " descricao, status_denun, id_usuario) "
+                                   + "VALUES (?, ?, ?, ?, ?, ?, ?, ? )");
         stmt.setString(1, d.getNome());
         stmt.setString(2, d.getNome_vitima());
         stmt.setString(3, d.getNome_autor());
         stmt.setInt(4, d.getTipo());
         stmt.setString(5, d.getData_ocorrido());
         stmt.setString(6, d.getDescricao());
+        stmt.setBoolean(7, d.getStatus_denun());
+        stmt.setInt(8, d.getId_usuario());
         stmt.executeUpdate();
         Database.closeConnection(conn, stmt);
     }
